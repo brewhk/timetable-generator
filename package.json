@@ -1,0 +1,17 @@
+{
+  "name": "schedule-table-generator",
+  "version": "0.0.1",
+  "description": "Dynamically generates a timetable in HTML according to provided options.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "schedule",
+    "timetable",
+    "table",
+    "grid"
+  ],
+  "author": "Brew <dev@brew.com.hk> (http://www.brew.com.hk)",
+  "license": "MIT"
+}
