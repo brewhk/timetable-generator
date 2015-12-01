@@ -122,7 +122,7 @@ var generateWeekTable = function (options) {
 			let td = tr.insertCell(j + 1);
 			if(options.buttons) {
 				let toggleButton = document.createElement('button');
-				toggleButton.className = "scheduler__cellButton";
+				toggleButton.className = options.buttonClass;
 				toggleButton.dataset.day = standardizedWeekStart;
 				toggleButton.dataset.hour = standardDayStart + j;
 				td.appendChild(toggleButton);
@@ -132,7 +132,7 @@ var generateWeekTable = function (options) {
 	return table;
 }
 
-exports.Scheduler = class Scheduler {
+exports.Timetable = class Timetable {
 	constructor (options) {
 		if (options.weekStart) {
 			options.weekStart = standardizeDay(options.weekStart)
