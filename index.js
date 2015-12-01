@@ -1,4 +1,6 @@
-var standardizeDay = function (day) {
+require('es6-shim');
+
+let standardizeDay = function (day) {
 	let standardDay;
 	// If cannot be converted into a number, process as string
 	if(isNaN(parseInt(day))) {
