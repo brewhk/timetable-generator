@@ -12,6 +12,10 @@
     "table",
     "grid"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brewhk/timetable-generator.git"
+  },
   "author": "Brew <dev@brew.com.hk> (http://www.brew.com.hk)",
   "license": "MIT"
 }
