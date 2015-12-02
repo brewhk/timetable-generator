@@ -101,6 +101,7 @@ var generateWeekTable = function (options) {
 	let standardDayStart = standardizeHour(options.dayStart);
 
 	let table = document.createElement('table');
+	table.dataset.template = "week";
 	if(options.id) {
 		table.id = options.id;
 	}
@@ -146,7 +147,19 @@ exports.Timetable = class Timetable {
 	}
 
 	static getData (table) {
-		// foreach row, put true/false values in object
+		let data = {};
+		if (table.dataset.template === "week") {
+			let buttons = table.getElementsByClassName('scheduler__button');
+			for (let i = 0; i < buttons.length; i++) {
+				let day = buttons[i].dataset.day;
+				let hour = buttons[i].dataset.hour;
+				if (!data[day]) {
+					data[day] = {};
+				}
+				data[day][hour] = ((" " + buttons[i].className + " " ).indexOf("schedular__active") > -1);
+			}
+		}
+		return data;
 	}
 
 	generateTable () {
